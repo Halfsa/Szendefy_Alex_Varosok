@@ -86,15 +86,13 @@ public class MainActivity extends AppCompatActivity {
         tvdobas.setText("Dobások: "+dobszam);
         tvwin.setText("Győzelem: "+win);
         tvlose.setText("Vereség: "+lose);
-        if (dobszam ==5)
+        if (win == 3)
         {
-            if (win > lose)
-            {
                 ali.setTitle("Győzelem").show();
-            }
-            else {
-                ali.setTitle("Vereség").show();
-            }
+        }
+        else if (lose ==3)
+        {
+            ali.setTitle("Vereség").show();
         }
     }
 
