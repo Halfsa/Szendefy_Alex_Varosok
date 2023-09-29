@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="125px"
+        android:gravity="center_vertical"
+        android:id="@+id/llcim"
+        android:background="@color/design_default_color_primary_variant">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CoinFlip"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:id="@+id/llimg"
+       android:layout_below="@+id/llcim">
+       <ImageView
+           android:layout_width="200dp"
+           android:layout_height="200dp"
+           android:background="@drawable/heads"
+           android:id="@+id/img"
+           />
+   </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/llimg"
+    android:gravity="center"
+    android:id="@+id/llbtn"
+    android:orientation="horizontal"
+    >
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Fej"
+        android:id="@+id/btnfej"
+        />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Írás"
+        android:id="@+id/btniras"
+        />
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/llbtn">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dobások: 0"
+            android:textSize="25dp"
+            android:id="@+id/tvdobas"
+            android:textColor="@android:color/darker_gray"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Győzelem: 0"
+            android:textSize="25dp"
+            android:id="@+id/tvwin"
+            android:textColor="@android:color/darker_gray"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vereség: 0"
+            android:textSize="25dp"
+            android:id="@+id/tvlose"
+            android:textColor="@android:color/darker_gray"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
