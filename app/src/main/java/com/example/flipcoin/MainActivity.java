@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 tipp = 1;
+                img.animate().rotationY(720).start();
                 Eredmeny();
             }
         });
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Eredmeny()
     {
+        String value = "";
         int dobas;
         dobszam++;
         dobas = r.nextInt(2);
@@ -66,12 +69,17 @@ public class MainActivity extends AppCompatActivity {
             img.setImageResource(R.drawable.tails);
         }
         */
+
         switch (dobas){
             case 0: img.setImageResource(R.drawable.heads);
-                Toast.makeText(MainActivity.this, "Fej", Toast.LENGTH_SHORT).show();
+            value = "fej";
+            Toast.makeText(MainActivity.this,value,Toast.LENGTH_SHORT);
+
             break;
             case 1: img.setImageResource(R.drawable.tails);
-                Toast.makeText(MainActivity.this, "Írás", Toast.LENGTH_SHORT).show();
+            value = "írás";
+            Toast.makeText(MainActivity.this,value,Toast.LENGTH_SHORT);
+
             break;
         }
 
